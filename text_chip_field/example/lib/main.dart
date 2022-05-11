@@ -45,15 +45,30 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  String s = "i am kunal jain";
   @override
   Widget build(BuildContext context) {
-    String s = "you know who i am";
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: const Text('Plugin example app'),
+            centerTitle: true,
+            title: const Text('Text Chip Field example app'),
           ),
-          body: TextChipField()),
+          body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextChipField(
+              initialString: s,
+              seprator: " ",
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              onChanged: (val) {
+                print(val); //"changed string"
+              },
+            ),
+          )),
     );
   }
 }

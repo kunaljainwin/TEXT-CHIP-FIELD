@@ -11,25 +11,43 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Fluter package for taking text input and converting them to chips/tags .
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Beautiful Tag input field
+
 
 ## Getting started
+With Dart: 
+```dart pub add text_chip_field```
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+With Flutter:
+```flutter pub add text_chip_field```
+
+```dependencies:
+  text_chip_field: ^0.0.2```
+  
+Import it:
+```import 'package:text_chip_field/text_chip_field.dart';```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Frontend
 
 ```dart
-const like = 'sample';
+TextChipField(
+              initialString: s,
+              seprator: " ",
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              onChanged: (val) {
+                print(val); //"changed string"
+              },
+            ),
 ```
 
 ## Additional information
