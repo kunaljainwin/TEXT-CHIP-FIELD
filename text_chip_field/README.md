@@ -25,9 +25,13 @@ With Dart:
 With Flutter:
 ```flutter pub add text_chip_field```
 
-```dependencies:
-  text_chip_field: ^0.0.2```
-  
+Pubspec.yaml:
+
+```
+dependencies:
+  text_chip_field: ^0.0.2
+```
+
 Import it:
 ```import 'package:text_chip_field/text_chip_field.dart';```
 
