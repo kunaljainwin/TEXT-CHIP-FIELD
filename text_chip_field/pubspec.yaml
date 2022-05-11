@@ -1,6 +1,6 @@
 name: text_chip_field
-description: Put a short description of the package here that helps potential users know whether this package might be useful for them.
-version: 0.0.2
+description: A Fluter package for taking text input and converting them to chips/tags .
+version: 0.0.3
 homepage: "https://github.com/kunaljainwin/Flutter/tree/master/text_chip_field"
 repository: "https://github.com/kunaljainwin/Flutter/tree/master/text_chip_field"
 flutter:

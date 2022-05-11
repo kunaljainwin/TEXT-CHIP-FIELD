@@ -5,3 +5,7 @@
 ## 0.0.2
 
 * Added features to decorate Text field
+
+## 0.0.3
+
+* Added README
