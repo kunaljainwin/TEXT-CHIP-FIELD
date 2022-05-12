@@ -14,7 +14,7 @@ and the Flutter guide for
 A Fluter package for taking text input and converting them to chips/tags .
 
 ## Features
-![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg width="360" height="640")
+![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg ="360x640")
 
  Beautiful Tags input field
 
