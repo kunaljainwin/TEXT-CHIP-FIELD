@@ -34,7 +34,7 @@ Pubspec.yaml:
 
 ```
 dependencies:
-  text_chip_field: ^0.0.3
+  text_chip_field: ^0.0.4
 ```
 
 Import it:
