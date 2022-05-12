@@ -15,7 +15,7 @@ A Fluter package for taking text input and converting them to chips/tags .
 
 ## Features
  Screenshots
-()
+![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg)
 
  Beautiful Tag input field
 
