@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * Added README
+
+## 0.0.4
+
+* Added Screenshot and updated ui features 

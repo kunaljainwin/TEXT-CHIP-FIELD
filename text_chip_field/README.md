@@ -14,8 +14,10 @@ and the Flutter guide for
 A Fluter package for taking text input and converting them to chips/tags .
 
 ## Features
+ Screenshots
+()
 
-Beautiful Tag input field
+ Beautiful Tag input field
 
 
 ## Getting started

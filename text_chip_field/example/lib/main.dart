@@ -21,31 +21,30 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    initPlatformState();
+    // initPlatformState();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      platformVersion = TextChipField.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
+  // Future<void> initPlatformState() async {
+  //   String platformVersion;
+  //   // Platform messages may fail, so we use a try/catch PlatformException.
+  //   // We also handle the message potentially returning null.
+  //   try {
+  //     platformVersion = TextChipField.platformVersion;
+  //   } on PlatformException {
+  //     platformVersion = 'Failed to get platform version.';
+  //   }
 
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
+  //   // If the widget was removed from the tree while the asynchronous platform
+  //   // message was in flight, we want to discard the reply rather than calling
+  //   // setState to update our non-existent appearance.
+  //   if (!mounted) return;
 
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
+  //   setState(() {
+  //     _platformVersion = platformVersion;
+  //   });
+  // }
 
-  String s = "i am kunal jain";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,17 +55,91 @@ class _MyAppState extends State<MyApp> {
           ),
           body: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: TextChipField(
-              initialString: s,
-              seprator: " ",
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
+            child: ListView(
+              children: [
+                SizedBox(
+                  height: 18,
                 ),
-              ),
-              onChanged: (val) {
-                print(val); //"changed string"
-              },
+                TextChipField(
+                  initialString: "Initial string",
+                  seprator: " ",
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green),
+                      borderRadius: BorderRadius.circular(0),
+                    ),
+                  ),
+                  onChanged: (val) {
+                    print(val); //"changed string"
+                  },
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                TextChipField(
+                  initialString: "Circular and colored border Initial string",
+                  seprator: " ",
+                  spacing: 4,
+                  chipsPadding: EdgeInsets.all(10),
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.blue,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 2.0,
+                      ),
+                    ),
+                  ),
+                  onChanged: (val) {
+                    print(val); //"changed string"
+                  },
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                TextChipField(
+                  initialString: "Chip padding",
+                  seprator: " ",
+                  spacing: 4,
+                  chipsPadding: EdgeInsets.symmetric(horizontal: 50),
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.green,
+                        width: 2.0,
+                      ),
+                    ),
+                  ),
+                  onChanged: (val) {
+                    print(val); //"changed string"
+                  },
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                TextChipField(
+                  initialString: "Chip padding given to place chips",
+                  seprator: " ",
+                  spacing: 4,
+                  runSpacing: 4,
+                  deleteIcon: Icons.clear,
+                  chipsPadding: EdgeInsets.all(10),
+                  decoration: InputDecoration(
+                    fillColor: Colors.cyan,
+                    filled: true,
+                  ),
+                  onChanged: (val) {
+                    print(val); //"changed string"
+                  },
+                ),
+              ],
             ),
           )),
     );

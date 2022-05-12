@@ -24,6 +24,8 @@ class TextChipField extends StatefulWidget {
   final double spacing;
   final EdgeInsets chipsPadding;
 
+  final chipColor;
+
   TextChipField({
     Key? key,
     this.initialString = "",
@@ -36,6 +38,7 @@ class TextChipField extends StatefulWidget {
     this.spacing = 0,
     this.chipsPadding = EdgeInsets.zero,
     this.validator,
+    this.chipColor,
   }) : super(key: key);
 
   @override
@@ -56,12 +59,14 @@ class _TextChipFieldState extends State<TextChipField> {
     return Wrap(
       children: [
         TextFormField(
+          enabled: true,
           validator: widget.validator,
           decoration: widget.decoration,
           style: widget.style,
           controller: _textEditingController,
           onChanged: (val) {
             setState(() {});
+            print("! " + _textEditingController.text + " !");
             widget.onChanged(val);
           },
         ),
@@ -73,16 +78,22 @@ class _TextChipFieldState extends State<TextChipField> {
             runSpacing: widget.runSpacing,
             children:
                 _textEditingController.text.split(widget.seprator!).map((e) {
-              return Chip(
-                label: Text(e.trim()),
-                deleteIcon: Icon(widget.deleteIcon),
-                onDeleted: () {
-                  setState(() {
-                    _textEditingController.text =
-                        _textEditingController.text.replaceAll(e, "").trim();
-                  });
-                },
-              );
+              return e.isNotEmpty
+                  ? Chip(
+                      label: Text(e),
+                      backgroundColor: widget.chipColor,
+                      deleteIcon: Icon(widget.deleteIcon),
+                      onDeleted: () {
+                        setState(() {
+                          _textEditingController.text =
+                              _textEditingController.text.replaceAll(e, "");
+                          _textEditingController.selection =
+                              TextSelection.fromPosition(TextPosition(
+                                  offset: _textEditingController.text.length));
+                        });
+                      },
+                    )
+                  : const SizedBox.shrink();
             }).toList(),
           ),
         ),
