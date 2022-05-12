@@ -14,18 +14,21 @@ and the Flutter guide for
 A Fluter package for taking text input and converting them to chips/tags .
 
 ## Features
- Screenshots
 ![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg)
 
- Beautiful Tag input field
+ Beautiful Tags input field
 
 
 ## Getting started
 With Dart: 
-```dart pub add text_chip_field```
+```
+dart pub add text_chip_field
+```
 
 With Flutter:
-```flutter pub add text_chip_field```
+```
+flutter pub add text_chip_field
+```
 
 Pubspec.yaml:
 
@@ -56,8 +59,8 @@ TextChipField(
             ),
 ```
 
-## Additional information
+<!-- ## Additional information
 
 TODO: Tell users more about the package: where to find more information, how to 
 contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+from the package authors, and more. -->
