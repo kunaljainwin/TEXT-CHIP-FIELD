@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-A Fluter package for taking text input and converting them to chips/tags .
+A Fluter package for taking text input and converting them to chips/tags . ~ [Kunal jain](https://www.linkedin.com/in/kunal-jain-32bbb418a)
 
 ## Features
 ![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg)
