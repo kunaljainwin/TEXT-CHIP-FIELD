@@ -12,6 +12,7 @@ and the Flutter guide for
 -->
 
 A Fluter package for taking text input and converting them to chips/tags . ~ [Kunal jain](https://www.linkedin.com/in/kunal-jain-32bbb418a)
+Pub.dev [link](https://pub.dev/packages/text_chip_field)
 
 ## Features
 ![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg)
