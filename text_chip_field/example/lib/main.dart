@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:text_chip_field/text_chip_field.dart';
+import 'package:text_chip_field_example/issue.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +49,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    Get.put(SearchFormController());
+    var ctrl = Get.find<SearchFormController>(); // GetX
+    return GetMaterialApp(
       home: Scaffold(
           appBar: AppBar(
             centerTitle: true,
@@ -57,6 +61,20 @@ class _MyAppState extends State<MyApp> {
             padding: const EdgeInsets.all(8.0),
             child: ListView(
               children: [
+                TextChipField(
+                  initialString: ctrl.purchaseNumbers,
+                  seprator: " ",
+                  decoration: InputDecoration(
+                    hintText: "First Name",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  onChanged: (val) {
+                    ctrl.purchaseNumbers = val;
+                    print('data: ${ctrl.purchaseNumbers}');
+                  },
+                ),
                 SizedBox(
                   height: 18,
                 ),

@@ -91,6 +91,7 @@ class _TextChipFieldState extends State<TextChipField> {
                               TextSelection.fromPosition(TextPosition(
                                   offset: _textEditingController.text.length));
                         });
+                        widget.onChanged(_textEditingController.text);
                       },
                     )
                   : const SizedBox.shrink();
