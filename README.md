@@ -1,3 +1,6 @@
+# TEXT CHIP FIELD
+A Fluter package for taking text input and converting them to chips/tags
+
 <!--
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
