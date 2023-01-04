@@ -18,7 +18,7 @@ A Fluter package for taking text input and converting them to chips/tags . [Kuna
 Pub.dev [link](https://pub.dev/packages/text_chip_field)
 
 ## Features
-<img src="https://github.com/kunaljainwin/TEXT-CHIP-FIELD/blob/7a18e3ad1dd201bb1163426e71451714b6c28e54/ss_13May_2022_1746.jpg" height=768></img>
+![](https://github.com/kunaljainwin/TEXT-CHIP-FIELD/blob/7a18e3ad1dd201bb1163426e71451714b6c28e54/ss_13May_2022_1746.jpg)
 
 Beautiful Tags input field
 
