@@ -19,7 +19,7 @@ Pub.dev [link](https://pub.dev/packages/text_chip_field)
 
 ## Features
 
-![](https://github.com/kunaljainwin/Flutter/blob/master/ss_13May_2022_1746.jpg)
+![](https://github.com/kunaljainwin/TEXT-CHIP-FIELD/blob/7a18e3ad1dd201bb1163426e71451714b6c28e54/ss_13May_2022_1746.jpg)
 
 Beautiful Tags input field
 
